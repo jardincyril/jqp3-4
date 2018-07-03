@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="assets/js/jquery-3.2.1.js"></script>
+  <title>exojq4</title>
+</head>
+<body>
+  <div class="rectangle"></div>
+  <button type="button" name="button" id="haut">hauteur de 10px</button>
+  <button type="button" name="button" id="colorGreen">le rectangle vert</button>
+  <button type="button" name="button" id="colorBlue">les couleurs initiales</button>
+  <button type="button" name="button" id="hide">disparaître le rectangle</button>
+  <button type="button" name="button" id="show">réaparaître le rectangle</button>
+  <script>
+  $('#show').click(function(){
+    $('.rectangle').show();
+  });
+  $('#hide').click(function(){
+    $('.rectangle').hide();
+  });
+  $('#colorGreen').click(function(){
+    $('.rectangle').css('background','green')
+  });
+  $('#colorBlue').click(function(){
+    $('.rectangle').css('background','blue')
+});
+$('#haut').click(function(){
+ if( $('.rectangle').height() < 100 ) {
+   $('.rectangle').css('height', $('.rectangle').height()+10+"px");
+ } else {
+   $('.rectangle').css('height', '10px');
+ }
+});
+</script>
+</body>
+</html>
